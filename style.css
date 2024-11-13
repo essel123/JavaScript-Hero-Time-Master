@@ -1,0 +1,42 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'poppins';
+    background: #000;
+}
+
+
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.time_{
+   width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    border: 1px solid black;
+}
+
+.bg{
+    padding: 20px;
+    color:white;
+}
+
+.bg h1{
+    font-size: 100px;
+}
+
