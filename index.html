@@ -7,18 +7,61 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <nav>
+
+        <button id="setAlarm" class="btn">Set Alarm</button>
+    </nav>
+   
     <main>
         <div class="container">
+           <div class="content">
             <div  class="time_">
-
-               <div class="bg">
-                <h1 class="time"></h1>
+                <h1 class="time" id="time"></h1>
+               <div class="customize">
+                <select name="format" id="customize">
+                    <option value="default">Customize</option>
+                    <option value="24-hour format">24-hour format</option>
+                    <option value="12-hour format">12-hour format</option>
+                </select>
                </div>
-
+                <div class="colorpicker">
+                   
+               <input type="color" name="colorpicker" id="colorpicker">
+               <label for="colorpicker">Time Color</label>
+                </div>
+        
             </div>
+            <div class="showAlarm">
+                <h2 class="title" id="title">Alarm</h2>
+                <p id="newAlarm"></p>
+            </div>
+            <div id="alarm" >
+                <div id="alarm_">
+                  <input type="number"  min="0" max="23" placeholder="hh" id="hours" />
+                  <input type="number" min="0" max="59" placeholder="mm" id="minutes"/>
+                  <input type="number"  min="0" max="59" placeholder="ss" id="seconds" />
+                  <select name="select" id="select">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                  </select>
+                  <button class="btn" id="button">Set</button>
+                </div>
+              </div>
+              
+           </div>
         </div>
     </main>
+
+    <div class="alert" id="error">
+        <button class="close-btn" id="close-btn"><img
+                src="./close.png" alt></button>
+        <div class="lightbox-content">
+            <div class="message">
+                <h1>Error</h1>
+            </div>
+
+        </div>
+    </div>
 
     <script src="./index.js"></script>
 </body>
