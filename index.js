@@ -1,7 +1,3 @@
-
-
-
-
 class Time {
   constructor(hours, minutes, seconds) {
     this.hours = hours;
@@ -52,18 +48,20 @@ function updateClock() {
   let call_ = new Time(date.getHours(), date.getMinutes(), date.getSeconds());
   let time = `${call_.getFormattedTime(customized)} ${call_.get12HourTime()}`;
   displayTime(time);
-  console.log(alarmText)
+  console.log(alarmText);
   if (alarmText.trim() === time.trim()) {
-    alert("it's time");
+    document.getElementById("error").style.display = "flex";
+    const erro_message = document.getElementById("error-message");
+    erro_message.textContent = "It's Time";
+    erro_message.style.color = "white";
   } else {
   }
 }
 
-const colorpicker =  document.getElementById("colorpicker");
-colorpicker.addEventListener('input',(event)=>{
-   document.getElementById("time").style.color = `${event.target.value}`
-    
-})
+const colorpicker = document.getElementById("colorpicker");
+colorpicker.addEventListener("input", event => {
+  document.getElementById("time").style.color = `${event.target.value}`;
+});
 
 // Initial clock update
 updateClock();
@@ -96,4 +94,5 @@ document.getElementById("setAlarm").addEventListener("click", () => {
 
 document.getElementById("close-btn").addEventListener("click", () => {
   document.getElementById("error").style.display = "none";
+  document.getElementById("").style.display = "none"
 });
