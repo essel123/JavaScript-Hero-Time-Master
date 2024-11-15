@@ -75,7 +75,6 @@ setInterval(() => {
 
 document.getElementById("setAlarm").addEventListener("click", () => {
   const alarm = document.getElementById("alarm");
-
   alarm.style.display = "flex";
   const btnset = document.getElementById("button");
   const hours = document.getElementById("hours");
